@@ -1,5 +1,10 @@
 # История фреймворка
 
+## v1.1 — 2026-08-28
+
+Git-репозиторий фреймворка; скиллы Claude Code (/new-project, /project-status,
+/content-prompter, /retro); визуальный гайд-артефакт (docs/visual-guide.html).
+
 ## v1.0 — 2026-08-28
 
 Создание фреймворка: 5 фаз (Discovery, Концепция, Дизайн, Фронтенд, Релиз) +

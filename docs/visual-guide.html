@@ -1,0 +1,194 @@
+<title>Карта фреймворка</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F6F8F7; --surface:#FFFFFF; --ink:#1C2422; --muted:#5C6B66; --line:#D9E2DE;
+  --accent:#0E6B5C; --accent-soft:#E1EFEA; --amber:#B4762A; --amber-soft:#F5EAD9;
+  --mono-bg:#EDF2F0; --opus:#0E6B5C; --sonnet:#4A6B9A; --haiku:#8A8F5A;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141917; --surface:#1C2320; --ink:#E6EDEA; --muted:#93A39D; --line:#2C3833;
+    --accent:#3FA98F; --accent-soft:#1E332D; --amber:#D19A4F; --amber-soft:#33291A;
+    --mono-bg:#232B27; --opus:#3FA98F; --sonnet:#7FA3D4; --haiku:#B0B67E;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141917; --surface:#1C2320; --ink:#E6EDEA; --muted:#93A39D; --line:#2C3833;
+  --accent:#3FA98F; --accent-soft:#1E332D; --amber:#D19A4F; --amber-soft:#33291A;
+  --mono-bg:#232B27; --opus:#3FA98F; --sonnet:#7FA3D4; --haiku:#B0B67E;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 "Golos Text",system-ui,sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:48px 24px 72px}
+header{margin-bottom:40px}
+.kicker{font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+h1{font:700 clamp(26px,5vw,40px)/1.15 "Unbounded",sans-serif;margin:0 0 14px;text-wrap:balance}
+.thesis{max-width:60ch;color:var(--muted);margin:0}
+.thesis b{color:var(--ink);font-weight:600}
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.role{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.role h3{margin:0 0 6px;font:600 13px/1 "Golos Text",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.role p{margin:0;font-size:14px;color:var(--muted)}
+.pipe{position:relative;margin-top:48px}
+.pipe::before{content:"";position:absolute;left:19px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.phase{position:relative;padding:0 0 36px 64px}
+.phase:last-child{padding-bottom:0}
+.num{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;background:var(--surface);
+  border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;
+  font:700 14px "Unbounded",sans-serif;color:var(--accent)}
+.phase h2{margin:6px 0 4px;font:600 20px/1.2 "Golos Text",sans-serif}
+.phase .sub{margin:0 0 12px;font-size:14px;color:var(--muted);max-width:60ch}
+.sessions{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);
+  border-radius:999px;padding:5px 12px 5px 14px;font-size:13.5px;font-weight:500}
+.dot{width:8px;height:8px;border-radius:50%}
+.dot.o{background:var(--opus)} .dot.s{background:var(--sonnet)} .dot.h{background:var(--haiku)}
+.arts{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.art{font:400 12.5px "JetBrains Mono",monospace;background:var(--mono-bg);border-radius:6px;padding:3px 8px;color:var(--ink)}
+.gate{font-size:13.5px;color:var(--muted);border-left:3px solid var(--accent);padding-left:10px}
+.gate b{color:var(--accent);font-weight:600}
+.band{margin:8px 0 36px 64px;background:var(--amber-soft);border:1px dashed var(--amber);border-radius:12px;padding:16px 18px;position:relative}
+.band h2{margin:0 0 4px;font:600 16px "Golos Text",sans-serif;color:var(--amber)}
+.band p{margin:0;font-size:14px;color:var(--muted);max-width:62ch}
+.band .art{margin-top:8px;display:inline-block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:48px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.card h3{margin:0 0 10px;font:600 13px/1 "Golos Text",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.card ul{margin:0;padding-left:18px;font-size:14px;color:var(--muted)}
+.card li{margin-bottom:6px}
+.card li b{color:var(--ink);font-weight:600}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:28px;font-size:13px;color:var(--muted);align-items:center}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+footer{margin-top:40px;font-size:13px;color:var(--muted)}
+footer code{font-family:"JetBrains Mono",monospace;font-size:12px}
+@media(max-width:640px){.roles,.grid2{grid-template-columns:1fr}.phase{padding-left:52px}.band{margin-left:52px}}
+@media(prefers-reduced-motion:no-preference){
+  .phase,.band{animation:rise .5s ease both}
+  .phase:nth-child(2){animation-delay:.05s}.phase:nth-child(3){animation-delay:.1s}
+  .phase:nth-child(4){animation-delay:.15s}.phase:nth-child(6){animation-delay:.2s}
+  .phase:nth-child(7){animation-delay:.25s}
+  @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+}
+</style>
+<div class="wrap">
+<header>
+  <div class="kicker">Фреймворк веб-проектов · v1.0</div>
+  <h1>От брифа до прода</h1>
+  <p class="thesis"><b>Правда живёт в артефактах, а не в макете.</b> Смыслы утверждаются дёшево — текстами и структурой — до дорогих этапов. Одна сессия Claude Code = одна фаза; состояние проекта — в файлах, не в чатах.</p>
+  <div class="roles">
+    <div class="role"><h3>Claude делает</h3><p>Исследования, документы, тексты, прототипы, промпты для генераций, вся вёрстка, git, деплой.</p></div>
+    <div class="role"><h3>Евгений решает</h3><p>Ревью и решения. Руками — дизайн в Figma, концепты, генерация контента в syntx.ai.</p></div>
+  </div>
+</header>
+
+<div class="pipe">
+  <div class="phase">
+    <div class="num">0</div>
+    <h2>Триаж</h2>
+    <p class="sub">5 вопросов → разметка фаз (нужна / упрощённая / пропущена), выбор стека. Гибкость закладывается здесь.</p>
+    <div class="sessions"><span class="chip"><span class="dot o"></span>Триаж</span></div>
+    <div class="arts"><span class="art">PROJECT.md</span><span class="art">decisions.md</span></div>
+    <div class="gate"><b>Стек:</b> лендинг → HTML+GSAP · корпсайт → Astro · магазин → Next.js</div>
+  </div>
+
+  <div class="phase">
+    <div class="num">1</div>
+    <h2>Discovery</h2>
+    <p class="sub">Бриф по пробелам (вопросы простым языком — в мессенджер заказчику) и исследование рынка: конкуренты, паттерны ниши, референсы.</p>
+    <div class="sessions"><span class="chip"><span class="dot o"></span>Discovery</span></div>
+    <div class="arts"><span class="art">brief.md</span><span class="art">research.md</span></div>
+    <div class="gate"><b>Гейт:</b> выжимка заказчику → молчит 1–2 дня → допущения в decisions.md, едем дальше</div>
+  </div>
+
+  <div class="phase">
+    <div class="num">2</div>
+    <h2>Концепция</h2>
+    <p class="sub">Оффер, tone of voice, контент-карта с настоящими черновыми текстами и контент-слотами. Плюс 2–3 визуальных направления HTML-мудбордом.</p>
+    <div class="sessions"><span class="chip"><span class="dot o"></span>Концепция</span></div>
+    <div class="arts"><span class="art">content-map.md</span><span class="art">01-concept/</span></div>
+    <div class="gate"><b>Главный гейт пайплайна:</b> заказчик утверждает смыслы, пока правка стоит абзац, а не макет</div>
+  </div>
+
+  <div class="phase">
+    <div class="num">3</div>
+    <h2>Дизайн</h2>
+    <p class="sub">Серый HTML-прототип → UI-кит (токены, зеркало Figma) → макеты. Тексты — только из контент-карты. Правка смысла → сначала в карту; правка визуала → в макет.</p>
+    <div class="sessions">
+      <span class="chip"><span class="dot s"></span>Прототип</span>
+      <span class="chip"><span class="dot s"></span>UI-кит</span>
+      <span class="chip"><span class="dot o"></span><span class="dot s"></span>Макеты</span>
+    </div>
+    <div class="arts"><span class="art">prototype/</span><span class="art">ui-kit.md</span><span class="art">Figma</span></div>
+    <div class="gate"><b>Гейт:</b> главная страница показывается заказчику до отрисовки остальных</div>
+  </div>
+
+  <div class="band">
+    <h2>⟳ Контент-промптер — сквозная сессия</h2>
+    <p>В любой момент: незакрытый контент-слот → промпт для syntx.ai (стиль, свет, палитра, место под текст, формат, негатив) → Евгений генерирует → файл в assets/. Один стилевой суффикс на весь проект.</p>
+    <span class="art">assets/prompts.md</span>
+  </div>
+
+  <div class="phase">
+    <div class="num">4</div>
+    <h2>Фронтенд</h2>
+    <p class="sub">Десктоп → адаптив (1024/768/375) → анимации («спокойный» уровень: GSAP + ScrollTrigger, prefers-reduced-motion). Ревью пакетами правок через превью.</p>
+    <div class="sessions">
+      <span class="chip"><span class="dot s"></span>Вёрстка</span>
+      <span class="chip"><span class="dot s"></span>Адаптив / анимации</span>
+    </div>
+    <div class="arts"><span class="art">03-code/</span><span class="art">git</span></div>
+    <div class="gate"><b>Приёмка:</b> соответствие макету ±2px · Lighthouse ≥ 90/90/90 · консоль чистая · 60fps</div>
+  </div>
+
+  <div class="phase">
+    <div class="num">5</div>
+    <h2>Релиз</h2>
+    <p class="sub">Предрелизный чек-лист: метатеги, OG, 404, формы, аналитика, sitemap. Деплой по стеку: GitHub Pages / Netlify / Vercel.</p>
+    <div class="sessions"><span class="chip"><span class="dot s"></span>Релиз</span></div>
+    <div class="arts"><span class="art">прод</span><span class="art">GitHub</span></div>
+    <div class="gate"><b>Гейт:</b> «выкладывай» от Евгения → деплой → проверка прода → статус «сдан»</div>
+  </div>
+
+  <div class="phase">
+    <div class="num">6</div>
+    <h2>Ретро</h2>
+    <p class="sub">4 вопроса за 15 минут. Уроки — в lessons.md, наследуются всеми новыми проектами. Проблема повторилась дважды → обязательная правка фреймворка.</p>
+    <div class="sessions"><span class="chip"><span class="dot o"></span>Ретро</span></div>
+    <div class="arts"><span class="art">lessons.md</span><span class="art">CHANGELOG.md</span></div>
+    <div class="gate"><b>Так фреймворк учится</b> — каждый проект делает следующий быстрее</div>
+  </div>
+</div>
+
+<div class="legend">
+  <span><span class="dot o"></span>Opus — думает</span>
+  <span><span class="dot s"></span>Sonnet — делает</span>
+  <span><span class="dot h"></span>Haiku — рутина</span>
+</div>
+
+<div class="grid2">
+  <div class="card">
+    <h3>Экономия токенов</h3>
+    <ul>
+      <li><b>Состояние в файлах</b> — чат закрывается без потерь</li>
+      <li><b>Сессия = фаза</b> — без чатов-долгожителей</li>
+      <li><b>Точечный контекст</b> — конкретные файлы, не «весь проект»</li>
+      <li><b>Правки пакетом</b> — списком 5–10, не по одной</li>
+      <li><b>План отдельно от исполнения</b> — Opus планирует, Sonnet делает</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Быстрый старт</h3>
+    <ul>
+      <li>Создай папку проекта, скопируй содержимое <b>_project-template/</b></li>
+      <li>Открой Claude Code в ней → скилл <b>/new-project</b> (или промпт Триажа)</li>
+      <li>Дальше: <b>/project-status</b> — где мы и что дальше</li>
+      <li><b>/content-prompter</b> — промпты для syntx.ai</li>
+      <li>После сдачи: <b>/retro</b> — уроки во фреймворк</li>
+    </ul>
+  </div>
+</div>
+
+<footer>База фреймворка: <code>Работа\Фреймворк</code> · подробности каждой фазы — в <code>framework/*.md</code>, промпты сессий внутри.</footer>
+</div>
