@@ -21,7 +21,7 @@
 | # | Сессия | Промпт в файле | Модель |
 |---|---|---|---|
 | 1 | Разбор проекта | `framework/01-discovery.md` | Opus |
-| 2 | Discovery | `framework/01-discovery.md` | Opus |
+| 2 | Исследование | `framework/01-discovery.md` | Opus |
 | 3 | Концепция | `framework/02-concept.md` | Opus |
 | 4 | Прототип | `framework/03-design.md` | Sonnet |
 | 5 | UI-кит | `framework/03-design.md` | Sonnet |
