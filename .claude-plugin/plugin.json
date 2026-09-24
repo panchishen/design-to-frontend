@@ -1,0 +1,9 @@
+{
+  "name": "design-to-frontend",
+  "description": "Фреймворк веб-проектов «дизайн → фронтенд»: старт проекта, фазы, статус, контент-промпты, ретро.",
+  "author": { "name": "panchishen", "url": "https://github.com/panchishen" },
+  "homepage": "https://github.com/panchishen/design-to-frontend",
+  "repository": "https://github.com/panchishen/design-to-frontend",
+  "license": "UNLICENSED",
+  "keywords": ["web", "design", "frontend", "landing", "framework"]
+}

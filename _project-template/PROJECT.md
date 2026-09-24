@@ -34,7 +34,7 @@
 
 ## Ссылки
 
-- Фреймворк: `../Фреймворк/framework/`
+- Фреймворк: плагин design-to-frontend (https://github.com/panchishen/design-to-frontend)
 - Figma: —
 - Репозиторий: —
 - Прод: —

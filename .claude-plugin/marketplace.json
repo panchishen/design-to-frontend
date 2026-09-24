@@ -1,0 +1,12 @@
+{
+  "name": "panchishen",
+  "owner": { "name": "panchishen", "url": "https://github.com/panchishen" },
+  "metadata": { "description": "Плагины panchishen для Claude Code" },
+  "plugins": [
+    {
+      "name": "design-to-frontend",
+      "source": "./",
+      "description": "Фреймворк веб-проектов «дизайн → фронтенд»: старт проекта, фазы, статус, контент-промпты, ретро."
+    }
+  ]
+}
