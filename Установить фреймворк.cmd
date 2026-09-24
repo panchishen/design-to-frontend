@@ -32,25 +32,25 @@ set "PATH=%USERPROFILE%\.local\bin;%PATH%"
 
 :haveclaude
 echo   [1/2] Подключаю каталог плагинов %REPO% ...
-claude plugin marketplace list 2>nul | findstr /i /c:"%MP%" >nul
+call claude plugin marketplace list 2>nul | findstr /i /c:"%MP%" >nul
 if errorlevel 1 goto mpadd
-claude plugin marketplace update %MP%
+call claude plugin marketplace update %MP%
 if errorlevel 1 goto fail
 goto plugin
 :mpadd
-claude plugin marketplace add %REPO%
+call claude plugin marketplace add %REPO%
 if errorlevel 1 goto fail
 
 :plugin
 echo.
 echo   [2/2] Ставлю плагин design-to-frontend ...
-claude plugin list 2>nul | findstr /i /c:"design-to-frontend" >nul
+call claude plugin list 2>nul | findstr /i /c:"design-to-frontend" >nul
 if errorlevel 1 goto pinstall
-claude plugin update %PLUGIN%
+call claude plugin update %PLUGIN%
 if errorlevel 1 goto fail
 goto done
 :pinstall
-claude plugin install %PLUGIN%
+call claude plugin install %PLUGIN%
 if errorlevel 1 goto fail
 
 :done
