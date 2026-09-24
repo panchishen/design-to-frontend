@@ -31,6 +31,7 @@
 | 9 | Релиз | `framework/05-release.md` | Sonnet |
 | 10 | Ретро | `framework/05-release.md` | Opus |
 | — | Контент-промптер (в любой момент) | `framework/content-gen.md` | Sonnet |
+| — | Трек «Лендинг на шаблоне» (фазы 0–8, запуск `/landing-next`) | `framework/landing-track.md` | Opus/Sonnet |
 
 Какие сессии нужны конкретному проекту — решает Разбор проекта (разметка фаз
 в `PROJECT.md`). Ненужные пропускаются с записью причины в `decisions.md`.
