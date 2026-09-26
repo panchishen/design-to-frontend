@@ -74,7 +74,7 @@ footer code{font-family:"JetBrains Mono",monospace;font-size:12px}
 </style>
 <div class="wrap">
 <header>
-  <div class="kicker">Фреймворк веб-проектов · v1.2</div>
+  <div class="kicker">Плагин design-to-frontend · v2.0</div>
   <h1>От брифа до прода</h1>
   <p class="thesis"><b>Правда живёт в артефактах, а не в макете.</b> Смыслы утверждаются дёшево — текстами и структурой — до дорогих этапов. Одна сессия Claude Code = одна фаза; состояние проекта — в файлах, не в чатах.</p>
   <div class="roles">
@@ -90,7 +90,13 @@ footer code{font-family:"JetBrains Mono",monospace;font-size:12px}
     <p class="sub">5 вопросов → разметка фаз (нужна / упрощённая / пропущена), выбор стека. Гибкость закладывается здесь.</p>
     <div class="sessions"><span class="chip"><span class="dot o"></span>Разбор проекта</span></div>
     <div class="arts"><span class="art">PROJECT.md</span><span class="art">decisions.md</span></div>
-    <div class="gate"><b>Стек:</b> лендинг → HTML+GSAP · корпсайт → Astro · магазин → Next.js</div>
+    <div class="gate"><b>Развилка треков:</b> сайт с нуля → полный цикл (ниже, <b>/next-phase</b>) · лендинг на готовом шаблоне → короткий трек (<b>/landing-next</b>). Стек: лендинг → HTML+GSAP · корпсайт → Astro · магазин → Next.js</div>
+  </div>
+
+  <div class="band">
+    <h2>⤷ Трек «Лендинг на шаблоне» — вместо фаз 1–5</h2>
+    <p>Лендинг собирается на готовом шаблоне и наполняется контентом заказчика. Фазы (одна = одна сессия, ведёт /landing-next): Старт → Разбор и аудит источников → Тексты → Промпты и визуал → Дизайн под заказчика* → Вёрстка и адаптив* → Согласование и релиз → PDF-инструкция → Ретро. *опционально, решается на разборе.</p>
+    <span class="art">framework/landing-track.md</span>
   </div>
 
   <div class="phase">
@@ -137,6 +143,7 @@ footer code{font-family:"JetBrains Mono",monospace;font-size:12px}
     <div class="sessions">
       <span class="chip"><span class="dot s"></span>Вёрстка</span>
       <span class="chip"><span class="dot s"></span>Адаптив / анимации</span>
+      <span class="chip"><span class="dot s"></span>Правка после вёрстки</span>
     </div>
     <div class="arts"><span class="art">03-code/</span><span class="art">git</span></div>
     <div class="gate"><b>Приёмка:</b> соответствие макету ±2px · Lighthouse ≥ 90/90/90 · консоль чистая · 60fps</div>
@@ -181,14 +188,14 @@ footer code{font-family:"JetBrains Mono",monospace;font-size:12px}
   <div class="card">
     <h3>Быстрый старт</h3>
     <ul>
-      <li>Создай папку проекта, скопируй содержимое <b>_project-template/</b></li>
-      <li>Открой Claude Code в ней → скилл <b>/new-project</b> (или промпт разбора проекта)</li>
-      <li>Дальше: <b>/project-status</b> — где мы и что дальше</li>
-      <li><b>/content-prompter</b> — промпты для syntx.ai</li>
-      <li>После сдачи: <b>/retro</b> — уроки во фреймворк</li>
+      <li>Один раз: <b>Установить фреймворк.cmd</b> (плагин design-to-frontend)</li>
+      <li>Новая сессия в пустой папке проекта → <b>/new-project</b> — структура и разбор</li>
+      <li>Каждая фаза — новая сессия: <b>/next-phase</b> (сайт с нуля) или <b>/landing-next</b> (лендинг)</li>
+      <li><b>/project-status</b> — где мы · <b>/content-prompter</b> — промпты для syntx.ai</li>
+      <li>После сдачи: <b>/retro</b> — уроки во фреймворк (локальная папка владельца)</li>
     </ul>
   </div>
 </div>
 
-<footer>База фреймворка: <code>Работа\Фреймворк</code> · подробности каждой фазы — в <code>framework/*.md</code>, промпты сессий внутри.</footer>
+<footer>Плагин и каталог: <code>github.com/panchishen/design-to-frontend</code> · база владельца: <code>Работа\Фреймворк</code> · подробности фаз — в <code>framework/*.md</code>.</footer>
 </div>
